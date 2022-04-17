@@ -1,0 +1,143 @@
+
+:root{ 
+    --md-gray : hsl(213, 19%, 18%);
+    --blue-dark : hsl(216, 12%, 8%);
+    --blue-med: hsl(213, 19%, 18%);
+    --dark-gray:hsl(216, 12%, 54%);
+    --light-gray:hsl(217, 12%, 63%);
+    --orange: hsl(25, 97%, 53%);
+    --white: white;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    background-color: var(--blue-dark) ;
+    font-family: 'Overpass', sans-serif;
+}
+
+.card { 
+    background: radial-gradient(circle at top, var(--blue-med) 0%,var(--blue-dark) 120%);
+    border-radius: 2em;
+    width: 300px;
+
+    padding: 2em;
+
+}
+
+.ratings-section{ 
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+
+}
+
+p{
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.hero { 
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.rating {
+    width: 40px;
+    aspect-ratio: 1 / 1; 
+    border-radius: 50%;
+    border-color: var(--md-gray);
+    border-width: 0.5em;
+    border-style: solid;
+    background-color: var(--md-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ratings-container .rating { 
+    margin-block:1rem;
+    color: var(--white);
+}
+
+.ratings-container .rating_input{ 
+    display: none;
+}
+
+.ratings-container .rating_input:checked + .rating{ 
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+
+.ratings-container .rating:hover { 
+    border-color: var(--light-gray);
+    background-color: var(--light-gray);
+    cursor: pointer;
+}
+
+.ratings-container .rating.active {
+    border-color: var(--orange);
+    background-color: var(--orange);
+}
+
+.submit-button { 
+    border-radius: 100vw;
+    width: 100%;
+    height: 3em;
+    background-color: var(--orange);
+    border-color: transparent;
+    padding: 0.25em;
+    color: white;
+    cursor: pointer;
+}
+
+.submit-button:hover { 
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.submit-button[disabled]
+{
+    cursor: not-allowed;
+    background-color: gray;
+}
+
+
+.ratings-container {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.ratings-thanks{ 
+display: grid;
+grid-auto-flow: row;
+place-items: center;
+text-align: center;
+gap: 1rem;
+}
+
+.selected-rating{ 
+    margin-block-start: 1em;
+    border-radius: 100vw;
+    background-color: var(--blue-med);
+    padding-inline: 1rem;
+    padding-block:0.5rem;
+    text-align: center;
+}
+
+.selected-rating > p { 
+    color: var(--orange);
+}
+

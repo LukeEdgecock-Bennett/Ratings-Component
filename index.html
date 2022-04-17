@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
+
+		<title>Frontend Mentor | Interactive rating component</title>
+
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="card">
+      <section id="selectRating" class="ratings-section">
+        <button class="rating">
+          <img src="/images/icon-star.svg" alt="" />
+        </button>
+        <p class="hero">How did we do?</p>
+        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        <div class="ratings-container">
+          <div>
+            <input class="rating_input" type="radio" name="ratings" value="1" id="ratings1" />
+            <label class="rating" for="ratings1">1</label>
+          </div>
+          <div>
+            <input class="rating_input" type="radio" name="ratings" value="2" id="ratings2" />
+            <label class="rating" for="ratings2">2</label>
+          </div>
+  
+          <div><input class="rating_input" type="radio" name="ratings" value="3" id="ratings3" /> <label class="rating" for="ratings3">3</label></div>
+          <div>
+            <input class="rating_input" type="radio" name="ratings" value="4" id="ratings4" />
+            <label class="rating" for="ratings4">4</label>
+          </div>
+  
+          <div><input class="rating_input" type="radio" name="ratings" value="5" id="ratings5" /> <label class="rating" for="ratings5">5</label></div>
+        </div>
+        <button class="submit-button" id="submit">Submit</button>
+      </section>
+		<section id="thankyouSplash" style="display: none;" class="ratings-thanks">
+      <img src="/images/illustration-thank-you.svg" alt="">
+      <section id="selectedRatingContaienr" class="selected-rating"></section>
+      <p class="hero">Thank you!</p>
+      <p>We appreciate you taking the time to give a rating.<br> If you ever need more support, don't hesitate to <br> get in touch!</p>
+    </section>
+		</div>
+	</body>
+
+  <script src="/script.js"></script>
+</html>
